@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Detector de Itens</title>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Monitorar Itens</h1>
+
+    <fieldset class="checklist">
+      <legend>Escolha os itens a monitorar:</legend>
+
+      <div class="grupo">
+        <strong>Sprinklers</strong>
+        <label><input type="checkbox" value="Basic Sprinkler" /> Basic Sprinkler</label>
+        <label><input type="checkbox" value="Advanced Sprinkler" /> Advanced Sprinkler</label>
+        <label><input type="checkbox" value="Godly Sprinkler" /> Godly Sprinkler</label>
+        <label><input type="checkbox" value="Master Sprinkler" /> Master Sprinkler</label>
+      </div>
+
+      <div class="grupo">
+        <strong>Ferramentas</strong>
+        <label><input type="checkbox" value="Favorite Tool" /> Favorite Tool</label>
+        <label><input type="checkbox" value="Harvest Tool" /> Harvest Tool</label>
+        <label><input type="checkbox" value="Recall Wrench" /> Recall Wrench</label>
+        <label><input type="checkbox" value="Trowel" /> Trowel</label>
+        <label><input type="checkbox" value="Watering Can" /> Watering Can</label>
+      </div>
+
+      <div class="grupo">
+        <strong>Outros</strong>
+        <label><input type="checkbox" value="Cleaning Spray" /> Cleaning Spray</label>
+        <label><input type="checkbox" value="Friendship Pot" /> Friendship Pot</label>
+        <label><input type="checkbox" value="Tanning Mirror" /> Tanning Mirror</label>
+      </div>
+    </fieldset>
+
+    <button id="ativar">Ativar Alarme</button>
+    <div id="status" class="status">Aguardando ativação...</div>
+
+    <audio id="alarme" src="D:\Soundpad\ARROTO22.m4a" preload="auto"></audio>
+  </div>
+
+  <script src="alarme.js"></script>
+</body>
+</html>

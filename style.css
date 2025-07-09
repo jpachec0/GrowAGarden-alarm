@@ -1,0 +1,104 @@
+body {
+  background-color: #f4f4f9;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  text-align: center;
+  width: 320px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.checklist {
+  border: 1px solid #ddd;
+  padding: 15px 20px;
+  border-radius: 10px;
+  text-align: left;
+  margin-bottom: 20px;
+  max-height: 230px;
+  overflow-y: auto;
+  background: #fafafa;
+}
+
+.checklist legend {
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 0 5px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.grupo {
+  margin-bottom: 15px;
+}
+
+.grupo strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 3px;
+  font-size: 0.95em;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #3c91e6;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #256ec1;
+}
+
+.status {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #555;
+}
+
+.status.encontrado {
+  color: green;
+}
+
+.status.nao-encontrado {
+  color: #999;
+}
+
+.status.alerta {
+  color: #d9534f;
+}
