@@ -27,7 +27,7 @@ async function verificar() {
   if (selecionados.length === 0) {
     status.textContent = "Nenhum item selecionado.";
     status.className = "status alerta";
-    setTimeout(verificar, 10000);
+    setTimeout(verificar, 1000);
     return;
   }
 
@@ -55,5 +55,5 @@ async function verificar() {
     status.className = "status alerta";
   }
 
-  setTimeout(verificar, 1000); // verifica a cada 10 segundos
+  setTimeout(verificar, 1000); // verifica a cada 1 segundo
 }
