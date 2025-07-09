@@ -55,5 +55,5 @@ async function verificar() {
     status.className = "status alerta";
   }
 
-  setTimeout(verificar, 10000); // verifica a cada 10 segundos
+  setTimeout(verificar, 1000); // verifica a cada 10 segundos
 }
