@@ -46,24 +46,24 @@ async function verificar() {
   }
 
   try {
-    const res = await fetch("https://corsproxy.io/?https://growagarden.gg/api/stock");
+    const res = await fetch("https://api.joshlei.com/v2/growagarden/stock");
     const data = await res.json();
-    const gear = data.gearStock || [];
-    const seed = data.seedsStock || [];
+    const gear = data.gear_stock || [];
+    const seed = data.seed_stock || [];
 
     const gearsEncontrados = gear.filter(item =>
-      selecionados.includes(item.name.toLowerCase())
+      selecionados.includes(item.display_name.toLowerCase())
     );
 
     const seedsEncontrados = seed.filter(item =>
-      selecionados.includes(item.name.toLowerCase())
+      selecionados.includes(item.display_name.toLowerCase())
     );
 
     const todosEncontrados = [...gearsEncontrados, ...seedsEncontrados];
     encontrado = todosEncontrados.length > 0;
 
     if (encontrado) {
-      const nomesEncontrados = todosEncontrados.map(e => e.name);
+      const nomesEncontrados = todosEncontrados.map(e => e.display_name);
       statusElem.textContent = `Encontrados: ${nomesEncontrados.join(", ")}`;
       statusElem.className = "status encontrado";
     } else {
