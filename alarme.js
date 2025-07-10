@@ -36,7 +36,7 @@ botao.addEventListener('click', () => {
 async function verificar() {
   const selecionados = Array.from(checklist)
     .filter(cb => cb.checked)
-    .map(cb => cb.value);
+    .map(cb => cb.value.toLowerCase());
 
   if (selecionados.length === 0) {
     statusElem.textContent = "Nenhum item selecionado.";
@@ -52,25 +52,23 @@ async function verificar() {
     const seed = data.seedsStock || [];
 
     const gearsEncontrados = gear.filter(item =>
-      selecionados.some(sel => sel.toLowerCase() === item.name.toLowerCase())
+      selecionados.includes(item.name.toLowerCase())
     );
 
     const seedsEncontrados = seed.filter(item =>
-      selecionados.some(sel => sel.toLowerCase() === item.name.toLowerCase())
+      selecionados.includes(item.name.toLowerCase())
     );
 
-    if (gearsEncontrados.length > 0 || seedsEncontrados.length > 0) {
-      const encontrados = [...gearsEncontrados, ...seedsEncontrados].map(e => e.name);
-      const naoEncontrados = selecionados.filter(sel =>
-        !encontrados.map(n => n.toLowerCase()).includes(sel.toLowerCase())
-      );
-      statusElem.textContent = `Encontrados: ${encontrados.join(", ")}`;
+    const todosEncontrados = [...gearsEncontrados, ...seedsEncontrados];
+    encontrado = todosEncontrados.length > 0;
+
+    if (encontrado) {
+      const nomesEncontrados = todosEncontrados.map(e => e.name);
+      statusElem.textContent = `Encontrados: ${nomesEncontrados.join(", ")}`;
       statusElem.className = "status encontrado";
-      encontrado = true;
     } else {
       statusElem.textContent = `Nenhum item encontrado.`;
       statusElem.className = "status nao-encontrado";
-      encontrado = false;
     }
 
   } catch (err) {
@@ -80,3 +78,4 @@ async function verificar() {
     encontrado = false;
   }
 }
+
