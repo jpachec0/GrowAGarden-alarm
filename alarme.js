@@ -46,7 +46,7 @@ async function verificar() {
   }
 
   try {
-    const res = await fetch("http://localhost:3000/proxy");
+    const res = await fetch("https://corsproxy.io/?https://growagarden.gg/api/stock"");
     const data = await res.json();
     const gear = data.gearStock || [];
     const seed = data.seedsStock || [];
