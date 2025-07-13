@@ -33,7 +33,7 @@ git clone https://github.com/seu-usuario/grow-a-garden-monitor.git
 cd grow-a-garden-monitor
 ````
 
-### 2. Abra o arquivo `index.html` no navegador
+### 2. Abra o arquivo `alarme.html` no navegador
 
 > **Dica:** Use o Chrome para melhor compatibilidade de áudio.
 
