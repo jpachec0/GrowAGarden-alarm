@@ -6,7 +6,7 @@ Um sistema completo em **HTML, CSS e JS** para monitorar a loja do jogo **Grow a
 
 ## 🔍 O que é isso?
 
-Este projeto consome dados da **API criada por [joshlei](https://github.com/JStudiooo)** do site do jogo e verifica, em tempo real, se os itens desejados estão disponíveis na loja (`gearStock` ou `seedsStock`). Quando encontrados, um som é disparado automaticamente.
+Este projeto consome dados da **API criada por [joshlei](https://github.com/JStudiooo)** e verifica, em tempo real, se os itens desejados estão disponíveis na loja (`gearStock` ou `seedsStock`). Quando encontrados, um som é disparado automaticamente.
 
 ---
 
