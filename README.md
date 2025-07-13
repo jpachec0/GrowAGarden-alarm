@@ -27,7 +27,7 @@ Este projeto consome dados da **API pública** do site do jogo e verifica, em te
 
 ### OU
 
-### 1.
+### 1. Clone o repositório
 ```bash
 git clone https://github.com/seu-usuario/grow-a-garden-monitor.git
 cd grow-a-garden-monitor
